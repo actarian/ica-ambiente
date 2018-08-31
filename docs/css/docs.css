@@ -128,7 +128,9 @@ h1 {
 .btn {
   position: relative;
   z-index: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all ease-in-out 350ms;
+  cursor: pointer; }
   .btn, .btn:hover, .btn:active, .btn:focus {
     border: none;
     outline: 0; }
@@ -141,6 +143,8 @@ h1 {
   text-align: center;
   padding: 15px;
   font-size: 14px; }
+  .btn-cta:hover {
+    background: #96ac32; }
 
 .form-control,
 textarea,
