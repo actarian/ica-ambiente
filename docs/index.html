@@ -36,7 +36,7 @@
             <div class="inner">
                 <h1>Vuoi conoscere quanti <strong>Kg di CO<sub>2</sub></strong> puoi risparmiare grazie alle vernici BIO?</h1>
                 <form class="form" name="ambiente" role="form" novalidate autocomplete="off">
-                    <div class="form-group">
+                    <div class="form-group form-group-radio">
                         <label class="radio">
                             <input type="radio" name="paintType" value="1" checked>
                             <span>Per interni IRIDEA BIO</span>
@@ -57,13 +57,29 @@
             <div class="inner">
                 <h1>Ecco il tuo contributo a favore dell'<strong>AMBIENTE</strong></h1>
                 <div class="columns">
-                    <div class="recap">con <span class="quantity">50</span> kg di vernice BIO</div>
-                    <div class="result"><strong class="saving">99</strong> <small>kg di CO<sub>2</sub></small> <small><strong>RISPARMIATI</strong></small></div>
-                    <div>
-                        <div class="info">ovvero 111 Km percorsi in auto *</div>
-                        <button type="button" class="btn btn-cta">Condividi i tuoi risultati</button>
+                    <div class="column column-recap">
+                        <div class="inner">
+                            con <span class="quantity">50</span> kg di vernice BIO
+                        </div>
+                    </div>
+                    <div class="column column-result">
+                        <div class="inner">
+                            <svg class="tree-green">
+                                <use xlink:href="#tree-green"></use>
+                            </svg>
+                            <div>
+                                <strong class="saving">99</strong> <small>kg di CO<sub>2</sub></small> <small><strong>RISPARMIATI</strong></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column-share">
+                        <div class="inner">
+                            <div class="info">ovvero 111 Km percorsi in auto *</div>
+                            <button type="button" class="btn btn-cta">Condividi i tuoi risultati</button>
+                        </div>
                     </div>
                 </div>
+                <div class="form-group-overlay"></div>
             </div>
         </section>
     </main>
@@ -320,6 +336,15 @@
             l28.8,70c2.5,7.5,10,12.5,18.8,12.5h21.3v-13.8H86.2c-2.5,0-5-1.3-5-3.8l-30-70c-3.8-8.8-3.8-17.5,0-25l28.8-70
             c1.3-2.5,3.8-3.8,5-3.8h83.8c2.5,0,5,1.3,5,3.8l30,70c3.8,7.5,3.8,16.3,0,23.8l-28.8,70c-1.3,2.5-2.5,3.8-5,3.8h-22.5v15h21.3
             c7.5,0,15-5,18.8-12.5l28.8-70C221.3,111.8,221.3,99.3,216.2,88.1" />
+        </symbol>
+        <symbol id="tree-green" viewBox="0 0 256 256">
+            <path fill="#A7C038" d="M133.7,131.8v-40L180,73.1l-5-12.5l-41.3,17.5v-45h-12.5v45L78.7,60.6l-5,12.5L120,91.8v40l-57.5-23.8
+                c0,1.3,0,2.5,1.3,5l5,12.5l51.3,21.3v97.5c0,3.8,2.5,6.3,6.3,6.3c3.8,0,6.3-2.5,6.3-6.3v-97.5l51.3-21.3l5-12.5c0-1.3,1.3-2.5,1.3-5
+                L133.7,131.8z" />
+            <path fill="#A7C038" d="M216.2,88.1l-28.8-70c-2.5-7.5-10-12.5-18.8-12.5H86.2c-8.8,0-15,5-18.8,12.5l-28.8,70c-5,11.3-5,23.8,0,35
+                l28.8,70c2.5,7.5,10,12.5,18.8,12.5h21.3v-13.8H86.2c-2.5,0-5-1.3-5-3.8l-30-70c-3.8-8.8-3.8-17.5,0-25l28.8-70
+                c1.3-2.5,3.8-3.8,5-3.8h83.8c2.5,0,5,1.3,5,3.8l30,70c3.8,7.5,3.8,16.3,0,23.8l-28.8,70c-1.3,2.5-2.5,3.8-5,3.8h-22.5v15h21.3
+                c7.5,0,15-5,18.8-12.5l28.8-70C221.3,111.8,221.3,99.3,216.2,88.1" />
         </symbol>
     </svg>
     <!-- /SVG Sprite -->

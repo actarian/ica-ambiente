@@ -48,18 +48,19 @@
             clearTimeout(item.data.to);
         }
         item.data = {
-            scale: 0.5 + (0.7 * Math.random()),
+            scaleFrom: 0.5 + (0.7 * Math.random()),
+            scaleTo: 0.5 + (0.7 * Math.random()),
             translateXFrom: -(10 + (100 * Math.random())),
             translateXTo: -(10 + (100 * Math.random())),
         };
         TweenMax.set(item, {
             opacity: 0,
-            transform: 'translateX(' + item.data.translateXFrom + '%) scale(' + item.data.scale + ')',
+            transform: 'translateX(' + item.data.translateXFrom + '%) scale(' + item.data.scaleFrom + ')',
         });
         setTimeout(function () {
             TweenMax.to(item, 10.0, {
                 opacity: 1,
-                transform: 'translateX(' + item.data.translateXTo + '%) scale(' + item.data.scale + ')',
+                transform: 'translateX(' + item.data.translateXTo + '%) scale(' + item.data.scaleTo + ')',
                 ease: Power2.easeOut,
                 delay: 1.0 * i,
                 overwrite: 'all',
@@ -97,7 +98,7 @@
         item.data = {
             scale: 0.5 + (0.5 * Math.random()),
             rotateZ: 360 * Math.random(),
-            translateY: -(25 + (10 * Math.random())),
+            translateY: -(20 + (15 * Math.random())),
         };
         TweenMax.set(item, {
             zIndex: 5000 - Math.round(item.data.translateY * -10),
