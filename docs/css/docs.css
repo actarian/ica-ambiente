@@ -91,7 +91,15 @@ strong {
 
 .section {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  transition: all ease-in-out 250ms; }
+  .enter .section {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 .section-form {
   display: flex;
@@ -455,5 +463,5 @@ Checkbox
     -webkit-transform: translateX(75vw) translateY(60vh) scale(0.7);
             transform: translateX(75vw) translateY(60vh) scale(0.7); }
     .step-2 .world-group {
-      -webkit-transform: translateX(70vw) translateY(30vh) scale(0.3);
-              transform: translateX(70vw) translateY(30vh) scale(0.3); } }
+      -webkit-transform: translateX(70vw) translateY(35vh) scale(0.3);
+              transform: translateX(70vw) translateY(35vh) scale(0.3); } }

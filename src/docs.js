@@ -28,17 +28,18 @@
         item.data = {
             scaleFrom: 0.5 + (0.7 * Math.random()),
             scaleTo: 0.5 + (0.7 * Math.random()),
-            translateXFrom: -(10 + (100 * Math.random())),
-            translateXTo: -(10 + (100 * Math.random())),
+            translateXFrom: -100 + (200 * Math.random()),
+            translateXTo: -100 + (200 * Math.random()),
+            translateY: -10 + (20 * Math.random()),
         };
         TweenMax.set(item, {
             opacity: 0,
-            transform: 'translateX(' + item.data.translateXFrom + '%) scale(' + item.data.scaleFrom + ')',
+            transform: 'translateX(' + item.data.translateXFrom + '%) translateY(' + item.data.translateY + '%) scale(' + item.data.scaleFrom + ')',
         });
         setTimeout(function () {
-            TweenMax.to(item, 10.0, {
+            TweenMax.to(item, Math.abs(item.data.translateXFrom - item.data.translateXTo) / 5, {
                 opacity: 1,
-                transform: 'translateX(' + item.data.translateXTo + '%) scale(' + item.data.scaleTo + ')',
+                transform: 'translateX(' + item.data.translateXTo + '%) translateY(' + item.data.translateY + '%) scale(' + item.data.scaleTo + ')',
                 ease: Power2.easeOut,
                 delay: 1.0 * i,
                 overwrite: 'all',
@@ -113,7 +114,6 @@
         trees.forEach(function (item, i) {
             tweenTree(item, i);
         });
-
     }
 
     window.addEventListener('resize', onResize);
@@ -150,8 +150,18 @@
 
     function onClick() {
         active = !active;
-        main.setAttribute('class', active ? 'step-2' : 'step-1');
+        main.setAttribute('class', active ? 'step-1' : 'step-2');
+        setTimeout(function () {
+            main.setAttribute('class', active ? 'step-2' : 'step-1');
+            setTimeout(function () {
+                main.setAttribute('class', active ? 'step-2 enter' : 'step-1 enter');
+            }, 500);
+        }, 500);
         // btn.removeEventListener('click', onClick);        
     }
+
+    setTimeout(function () {
+        main.setAttribute('class', 'step-1 enter');
+    }, 500);
 
 }());

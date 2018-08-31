@@ -106,6 +106,14 @@ $alert-color: red;
 .section {
     position: relative;
     width: 100%;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all ease-in-out 250ms;
+
+    .enter & {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section-form {
@@ -490,7 +498,7 @@ Checkbox
             transform: translateX(75vw) translateY(60vh) scale(0.7);
 
             .step-2 & {
-                transform: translateX(70vw) translateY(30vh) scale(0.3);
+                transform: translateX(70vw) translateY(35vh) scale(0.3);
             }
         }
     }
