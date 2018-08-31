@@ -35,7 +35,8 @@ strong {
   left: -35vh;
   top: -41.42857vh;
   -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%; }
+          transform-origin: 50% 100%;
+  fill: white; }
 
 .world,
 .world-shadow {
